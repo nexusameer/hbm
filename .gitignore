@@ -1,0 +1,11 @@
+/db.sqlite3
+/env/
+/.env
+/venv
+*.pyc
+__pycache__/
+data_input/
+.idea/
+.env
+.DS_Store
+o365_token.txt

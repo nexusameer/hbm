@@ -1,0 +1,111 @@
+<html> 
+    <head> 
+        <style> 
+            body{
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            p {
+                color: #1c1c1c
+            }
+            h4 {
+                color: #1c1c1c
+            }
+            h3 {
+                color: #1c1c1c
+            }
+            .text-muted{
+                color: #768192
+            }
+            img{
+                border: 0;
+                height: auto;
+                line-height: 100%;
+                outline: none;
+                text-decoration: none;
+                -ms-interpolation-mode: bicubic;
+            }
+            .table-wrapper{
+                max-width: 700px;
+                width: 100%;
+            }
+            .table-header{
+                background-color: #1c1c1c;
+                padding: 0;
+            }
+            .table-template{
+                padding: 0;
+            }
+            .horizontal-spacing{
+                padding: 10px;
+            }
+            .hr-style{
+                border-top: 3px solid #555; 
+                width: 80%;
+                border-radius: 5px;
+            }
+            @media screen and (max-width: 700px) {
+                .bol-wrapper{
+                    max-width: none !important;
+                }
+            }
+        </style> 
+    </head>
+    <body> 
+        <div class="preview" style="display:none">${preview}</div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ebedef">
+            <!-- HEADER -->
+            <tr>
+                <td align="center" class="table-header">
+                    <table border="0" cellspacing="0" cellpadding="0" align="center" class="table-wrapper">
+                        <tr>
+                            <td width="100%" align="center" valign="top" class="horizontal-spacing">
+                                <img src='data:image/png;base64,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' width="123" height="80" border="0" >
+                            </td>
+                        </tr>
+                    </table> 
+                </td>
+            </tr>
+            <!-- TEMPLATE  -->
+            <tr>
+                <td align="center" class="table-template">
+                    <table border="0" cellspacing="0" cellpadding="0" align="center" class="table-wrapper">
+                        <tr style="background-color: #fff;">
+                            <td width="100%" align="left" valign="top" class="horizontal-spacing">
+                                ${email_text}
+                            </td>
+                        </tr>
+                    </table> 
+                </td>
+            </tr>
+            <!-- FOOTER -->
+            <tr>
+                <td align="center" class="table-template">
+                    <table border="0" cellspacing="0" cellpadding="0" align="center" class="table-wrapper">
+                        <tr style="background-color: #fff;">
+                            <td align="center" style="padding: 10px 0px; ">&nbsp;</td>
+                        </tr>
+                        <tr style="background-color: #fff;">
+                            <td align="center" style="border-top: 2px solid #a2a2a2; padding: 10px 0px; ">&nbsp;</td>
+                        </tr>
+                        <tr style="background-color: #fff;">
+                            <td width="100%" align="center" valign="top" class="horizontal-spacing" >
+                                <p class="text-muted"> Deze email is automatisch gegenereerd. </p>
+                                <p class="text-muted"> Hoorn Bloommasters</p>
+                                <p class="text-muted"> Aalsmeerderweg 553 B | 1437 EG Rozenburg </p>
+                                <p class="text-muted"> <a href="mailto:info@hoornbloommasters.com"> info@hoornbloommasters.com</a> | +31 (0)297 325 150 </p>
+                            </td>
+                        </tr>
+                        <tr style="background-color: #fff;">
+                            <td align="center" style="padding: 20px 0px; ">&nbsp;</td>
+                        </tr>
+                        <tr style="background-color: #ebedef;">
+                            <td align="center" style="padding: 20px 0px; ">&nbsp;</td>
+                        </tr>
+                    </table> 
+                </td>
+            </tr>
+        </table>
+    </body> 
+</html>
